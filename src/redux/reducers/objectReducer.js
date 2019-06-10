@@ -1,16 +1,11 @@
 import createData from './utils/createData'
 
-const intialState = createData()
-const { uuid } = intialState
+const { intialState, uuid } = createData()
 
 export default (state = intialState, action) => {
-  let newState = state
-
-  const start = Date.now()
-
   switch (action.type) {
     case 'OBJECT_TEST':
-      newState = {
+      return {
         ...state,
         object: {
           ...state.object,
@@ -26,12 +21,8 @@ export default (state = intialState, action) => {
           [uuid[9]]: { found: true },
         },
       }
-      break
 
     default:
       return state
   }
-
-  console.log(`${action.type} took ${Date.now() - start}ms`)
-  return newState
 }

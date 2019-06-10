@@ -1,20 +1,18 @@
-import { combineReducers } from 'redux'
-import { pipe } from 'ramda'
-import logSlowReducers from 'redux-log-slow-reducers'
+import combineReducers from './utils/combineReducers'
+import reduceReducers from 'reduce-reducers'
 
 import arrayReducer from './arrayReducer'
 import mapReducer from './mapReducer'
 import objectReducer from './objectReducer'
 import valuesReducer from './valuesReducer'
 
-const combineLogSlowReducers = pipe(
-  logSlowReducers,
-  combineReducers
+const test = reduceReducers(
+  arrayReducer,
+  mapReducer,
+  objectReducer,
+  valuesReducer
 )
 
-export default combineLogSlowReducers({
-  array: arrayReducer,
-  map: mapReducer,
-  object: objectReducer,
-  values: valuesReducer,
+export default combineReducers({
+  test,
 })

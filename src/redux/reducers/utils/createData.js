@@ -1,7 +1,7 @@
 import uuidv4 from 'uuid/v4'
 import { takeLast } from 'ramda'
 
-const ITEMS = 10000
+const ITEMS = 1000
 
 export default () => {
   const uuid = []
@@ -15,8 +15,10 @@ export default () => {
   })
 
   return {
-    array: keys,
-    object: obj,
+    intialState: {
+      array: keys,
+      object: obj,
+    },
     uuid: takeLast(10, uuid),
   }
 }
