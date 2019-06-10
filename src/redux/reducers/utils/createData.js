@@ -7,7 +7,7 @@ export default () => {
   const uuid = []
   const obj = {}
 
-  const keys = Array.from(Array(ITEMS)).map((_, i) => {
+  const arr = Array.from(Array(ITEMS)).map((_, i) => {
     uuid[i] = uuidv4()
     const myObject = { id: uuid[i] }
     obj[uuid[i]] = myObject
@@ -16,7 +16,7 @@ export default () => {
 
   return {
     intialState: {
-      array: keys,
+      array: arr,
       object: obj,
     },
     uuid: takeLast(10, uuid),
