@@ -9,8 +9,10 @@ export default () => {
 
   const arr = Array.from(Array(ITEMS)).map((_, i) => {
     uuid[i] = uuidv4()
+
     const myObject = { id: uuid[i] }
     obj[uuid[i]] = myObject
+
     return myObject
   })
 
