@@ -1,18 +1,12 @@
+# Redux Performance talk
 
+[![Redux Perf Talk](https://img.youtube.com/vi/zAzejnrwRtY/0.jpg)](https://www.youtube.com/watch?v=zAzejnrwRtY)
 
+## Slides
 
+[Slides from the talk](https://github.com/davidjbradshaw/redux-talk/blob/master/Redux%20Perf.pdf)
 
-<object width="425" height="350">
-  <param name="movie" value="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg" />
-  <param name="wmode" value="transparent" />
-  <embed src="https://youtu.be/zAzejnrwRtY"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" />
-</object>
+## Maps vs Arrays Demo
 
+This is a simple demo of the performance difference between using Maps and Arrays inside Redux reducers
 
-## Maps vs Arrays
-
-This is a simple demo of the performance difference between using Maps and Arrays inside Redux reducers that was created for a talk on Redux Perf.
-
-The slides from the talk are also available in this repo.
